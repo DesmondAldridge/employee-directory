@@ -13,7 +13,6 @@ class Search extends Component {
     error: '',
   };
 
-  // When the component mounts, get a list of all available base breeds and update this.state.breeds
   componentDidMount() {
     API.getUserList()
       .then((res) => this.setState({ genders: res.data.message }))
@@ -49,7 +48,7 @@ class Search extends Component {
           <SearchForm
             handleFormSubmit={this.handleFormSubmit}
             handleInputChange={this.handleInputChange}
-            breeds={this.state.breeds}
+            genders={this.state.genders}
           />
           <SearchResults results={this.state.results} />
         </Container>

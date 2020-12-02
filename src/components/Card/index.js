@@ -1,24 +1,20 @@
-import React from "react";
-import CardBtn from "../CardBtn";
-import "./style.css";
+import React from 'react';
+import CardBtn from '../CardBtn';
+import './style.css';
 
 function Card(props) {
   return (
     <div
-      className="card"
+      className='card'
       style={{
-        backgroundImage: props.image ? `url(${props.image})` : "none"
+        backgroundImage: props.picture ? `url(${props.picture})` : 'none',
       }}
     >
-      {!props.image && <i className="fa fa-spinner fa-spin" aria-hidden="true" />}
-      <CardBtn
-        onClick={props.handleBtnClick}
-        data-value="pass"
-      />
-      <CardBtn
-        onClick={props.handleBtnClick}
-        data-value="pick"
-      />
+      {!props.picture && (
+        <i className='fa fa-spinner fa-spin' aria-hidden='true' />
+      )}
+      <CardBtn onClick={props.handleBtnClick} data-value='pass' />
+      <CardBtn onClick={props.handleBtnClick} data-value='pick' />
     </div>
   );
 }
