@@ -39,7 +39,7 @@ class Discover extends Component {
     this.loadNextUser();
   };
 
-  loadNextDog = () => {
+  loadNextUser = () => {
     API.getRandomUser()
       .then((res) =>
         this.setState({
